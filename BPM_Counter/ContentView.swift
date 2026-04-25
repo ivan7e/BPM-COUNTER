@@ -1,6 +1,6 @@
 //
 //  ContentView.swift
-//  BPM COUNTER
+//  BPM_Counter
 //
 //  Created by Ghost Buster on 4/25/26.
 //
