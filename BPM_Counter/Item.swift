@@ -10,9 +10,13 @@ import SwiftData
 
 @Model
 final class Item {
+    var songName: String
+    var bpm: Double
     var timestamp: Date
     
-    init(timestamp: Date) {
-        self.timestamp = timestamp
+    init(songName: String, bpm:Double) {
+        self.songName = songName
+        self.bpm = bpm
+        self.timestamp = Date()
     }
 }

@@ -1,15 +1,11 @@
-//
-//  BPM_CounterApp.swift
-//  BPM_Counter
-//
-//  Created by Ghost Buster on 4/25/26.
-//
-
 import SwiftUI
 import SwiftData
 
 @main
 struct BPM_CounterApp: App {
+    
+    @AppStorage("isLoggedIn") private var isLoggedIn = false
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,7 +21,11 @@ struct BPM_CounterApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if isLoggedIn {
+                BPMHomeView()
+            } else {
+                LoginView()
+            }
         }
         .modelContainer(sharedModelContainer)
     }
