@@ -15,7 +15,7 @@ struct BPM_CounterApp: App {
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
         } catch {
-            fatalError("Could not create ModelContainer: \(error)")
+            fatalError("Errror: Could not create ModelContainer: \(error)")
         }
     }()
 
